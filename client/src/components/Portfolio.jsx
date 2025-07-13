@@ -49,13 +49,7 @@ export default function Portfolio() {
             await fetch(domain + "/data/experience.json").then(res => res.json()).then(setExperience);
             await fetch(domain + "/data/education.json").then(res => res.json()).then(setEducation);
             await fetch(domain + "/data/contact.json").then(res => res.json()).then(setContact);
-            await fetch(domain + "/data/profile.json")
-                .then(res => res.json())
-                .then((data) => {
-                    setProfile(data);
-                    console.log("Fetched profile data:", data); // ✅ Log here instead
-                })
-                .catch((err) => console.error("Failed to fetch profile.json:", err));
+            await fetch(domain + "/data/profile.json").then(res => res.json()).then((data) => {setProfile(data)})
             setLoading(false);
         };
         fetchData();

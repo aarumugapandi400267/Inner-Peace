@@ -1,11 +1,11 @@
 {
-  "name": "Majesty",
-  "title": "Full Stack & DevOps Enthusiast",
+  "name": "Aarumugapandi T",
+  "title": "MERN Stack Developer",
   "profileImage": "https://aarumugapandi400267.github.io/Inner-Peace/data/profile.png",
   "social": {
-    "github": "https://github.com/majesty",
-    "linkedin": "https://linkedin.com/in/majesty",
-    "website": "https://majesty.dev"
+    "github": "https://github.com/aarumugapandi400267",
+    "linkedin": "https://www.linkedin.com/in/aarumugapandi/",
+    "website": "https://aarumugapandi400267.github.io/Inner-Peace/"
   },
   "sections": {
     "experience": "Experience",
@@ -15,10 +15,9 @@
     "projects": "Featured Projects",
     "contact": "Let's Work Together"
   },
-  "contactText": "Open to full-time roles, freelance projects, and collaborations.",
+  "contactText": "Open to full-time roles and collaborations.",
   "buttons": {
     "viewCertificate": "View Certificate",
-    "github": "GitHub",
-    "contactMe": "Contact Me"
+    "github": "GitHub"
   }
 }
