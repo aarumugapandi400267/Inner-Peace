@@ -1,0 +1,24 @@
+{
+  "name": "Majesty",
+  "title": "Full Stack & DevOps Enthusiast",
+  "profileImage": "/data/profile.png",
+  "social": {
+    "github": "https://github.com/majesty",
+    "linkedin": "https://linkedin.com/in/majesty",
+    "website": "https://majesty.dev"
+  },
+  "sections": {
+    "experience": "Experience",
+    "education": "Education",
+    "skills": "Skills",
+    "certifications": "Certifications",
+    "projects": "Featured Projects",
+    "contact": "Let's Work Together"
+  },
+  "contactText": "Open to full-time roles, freelance projects, and collaborations.",
+  "buttons": {
+    "viewCertificate": "View Certificate",
+    "github": "GitHub",
+    "contactMe": "Contact Me"
+  }
+}

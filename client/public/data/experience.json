@@ -1,0 +1,20 @@
+[
+  {
+    "role": "Junior Developer",
+    "company": "IAgami Technologies Pvt. Ltd., Trichy",
+    "duration": "June 2024 – Present",
+    "description": "Developed scalable RESTful APIs and integrated AI models like Google Gemini for automation, semantic search, and intelligent content generation."
+  },
+  {
+    "role": "Intern – Salesforce Developer",
+    "company": "IAgami Technologies Pvt. Ltd., Trichy",
+    "duration": "March 2024 – May 2025",
+    "description": "Worked on Salesforce platform, developed custom business solutions, integrated REST APIs, and completed Salesforce training with 51 Trailhead badges and 1 Superbadge."
+  },
+  {
+    "role": "Intern – MERN Stack Developer",
+    "company": "IViewSense Pvt. Ltd., Chennai",
+    "duration": "July 2023 – October 2024",
+    "description": "Completed certified MERN Stack training, built full-stack apps using MongoDB, Express, React, and Node, and gained hands-on API development experience."
+  }
+]
