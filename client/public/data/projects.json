@@ -1,32 +1,38 @@
 [
   {
+    "title": "Mau – AI Email Automation",
+    "description": "Natural language powered API for sending contextual emails. Auto-fetches contacts and dispatches securely.",
+    "repo": "https://github.com/aarumugapandi400267/Mau",
+    "status":"Working"
+  },
+  {
     "title": "AR App – Backend Service",
     "description": "Developed Node.js + MySQL backend to deliver real-time product data for an iOS AR app.",
-    "repo": ""
+    "repo": "",
+    "status":"Completed"
   },
   {
     "title": "Salesforce CRM – Manufacturing Industry",
     "description": "Implemented Salesforce Sales & Service Cloud with WhatsApp integration using Wati API.",
-    "repo": ""
+    "repo": "",
+    "status":"Completed"
   },
   {
     "title": "VerseGo – Story Posting Web App",
     "description": "MERN-based platform for photo posts, likes, and edits. Real-time updates and intuitive UI.",
-    "repo": ""
+    "repo": "https://github.com/aarumugapandi400267/Verse",
+    "status":"Completed"
   },
   {
     "title": "RAG – PDF QA System",
     "description": "Node.js API that chunks and stores PDFs in MongoDB; integrates Gemini API for intelligent Q&A.",
-    "repo": ""
+    "repo": "https://github.com/aarumugapandi400267/RAG",
+    "status":"Hold"
   },
   {
     "title": "Biometric Processor",
     "description": "CSV processor that extracts student attendance and auto-fills data using SIN; backend exposes detailed APIs.",
-    "repo": ""
-  },
-  {
-    "title": "Mau – AI Email Automation",
-    "description": "Natural language powered API for sending contextual emails. Auto-fetches contacts and dispatches securely.",
-    "repo": ""
+    "repo": "",
+    "status":"Completed"
   }
 ]

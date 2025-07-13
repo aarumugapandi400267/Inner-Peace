@@ -36,12 +36,13 @@ export default function Portfolio() {
     const [experience, setExperience] = useState([]);
     const [education, setEducation] = useState([]);
     const [contact, setContact] = useState({ address: "", phone: "", email: "" });
-    const [themeMode, setThemeMode] = useState("dark");
+    const [themeMode, setThemeMode] = useState("light");
     const [profile, setProfile] = useState({});
     const [loading, setLoading] = useState(true);
 
     // const domain = "/Inner-Peace"
     const domain = "https://aarumugapandi400267.github.io/Inner-Peace"
+    
     useEffect(() => {
         const fetchData = async () => {
             await fetch(domain + "/data/projects.json").then(res => res.json()).then(setProjects);
@@ -50,7 +51,7 @@ export default function Portfolio() {
             await fetch(domain + "/data/experience.json").then(res => res.json()).then(setExperience);
             await fetch(domain + "/data/education.json").then(res => res.json()).then(setEducation);
             await fetch(domain + "/data/contact.json").then(res => res.json()).then(setContact);
-            await fetch(domain + "/data/profile.json").then(res => res.json()).then((data) => {setProfile(data)})
+            await fetch(domain + "/data/profile.json").then(res => res.json()).then((data) => { setProfile(data) })
             setLoading(false);
         };
         fetchData();
@@ -136,7 +137,7 @@ export default function Portfolio() {
                             <MuiLink href={profile.social.linkedin} target="_blank" color="inherit">
                                 <Linkedin color={themeMode === "dark" ? "#fff" : undefined} />
                             </MuiLink>
-                            <MuiLink href={profile.social.website}target="_blank" color="inherit">
+                            <MuiLink href={profile.social.website} target="_blank" color="inherit">
                                 <Globe color={themeMode === "dark" ? "#fff" : undefined} />
                             </MuiLink>
                         </Stack>
@@ -158,8 +159,14 @@ export default function Portfolio() {
                                         <Box p={3} borderRadius={2} bgcolor="background.paper">
                                             <Typography variant="subtitle1" fontWeight="bold" color="text.primary">{item.role}</Typography>
                                             <Typography variant="body2" color="text.secondary">{item.company} | {item.duration}</Typography>
-                                            <Typography variant="body2" mt={1} color="text.secondary">{item.description}</Typography>
-                                        </Box>
+                                            <Typography variant="body2" mt={1} color="text.secondary">
+                                                {item.description.split('\n').map((line, idx) => (
+                                                    <span key={idx}>
+                                                        {line}
+                                                        <br />
+                                                    </span>
+                                                ))}
+                                            </Typography>                                        </Box>
                                     </motion.div>
                                 ))}
                             </Stack>
@@ -258,21 +265,32 @@ export default function Portfolio() {
                                         <CardContent>
                                             <Typography variant="subtitle1" fontWeight="bold" color="text.primary">
                                                 {project.title}
+                                                {project.repo && (
+                                                    <IconButton
+                                                        color="primary"
+                                                        sx={{ mt: 1, color: "#2196f3" }}
+                                                        href={project.repo}
+                                                        target="_blank"
+                                                        rel="noopener noreferrer"
+                                                        aria-label="GitHub Repository"
+                                                    >
+                                                        <Github color={themeMode === "dark" ? "#fff" : undefined} />
+                                                    </IconButton>
+                                                )}
                                             </Typography>
                                             <Typography variant="body2" color="text.secondary" gutterBottom>
                                                 {project.description}
                                             </Typography>
-                                            <Button
-                                                variant="contained"
-                                                size="small"
-                                                sx={{ mt: 1 }}
-                                                color="primary"
-                                                href={project.repo}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                            >
-                                                GitHub
-                                            </Button>
+                                            {/* Show status chip if available */}
+                                            {project.status && (
+                                                <Chip
+                                                    label={project.status}
+                                                    color={project.status === "Completed" ? "success" : "warning"}
+                                                    size="small"
+                                                    sx={{ mb: 1 }}
+                                                />
+                                            )}
+
                                         </CardContent>
                                     </Card>
                                 </Grid>
