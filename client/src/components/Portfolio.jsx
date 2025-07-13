@@ -37,13 +37,14 @@ export default function Portfolio() {
   const [contact, setContact] = useState({ address: "", phone: "", email: "" });
   const [themeMode, setThemeMode] = useState("dark");
 
+  const domain="https://aarumugapandi400267.github.io"
   useEffect(() => {
-    fetch("/data/projects.json").then(res => res.json()).then(setProjects);
-    fetch("/data/skills.json").then(res => res.json()).then(setSkills);
-    fetch("/data/certifications.json").then(res => res.json()).then(setCertifications);
-    fetch("/data/experience.json").then(res => res.json()).then(setExperience);
-    fetch("/data/education.json").then(res => res.json()).then(setEducation);
-    fetch("/data/contact.json").then(res => res.json()).then(setContact);
+    fetch(domain+"/data/projects.json").then(res => res.json()).then(setProjects);
+    fetch(domain+"/data/skills.json").then(res => res.json()).then(setSkills);
+    fetch(domain+"/data/certifications.json").then(res => res.json()).then(setCertifications);
+    fetch(domain+"/data/experience.json").then(res => res.json()).then(setExperience);
+    fetch(domain+"/data/education.json").then(res => res.json()).then(setEducation);
+    fetch(domain+"/data/contact.json").then(res => res.json()).then(setContact);
   }, []);
 
   const theme = getTheme(themeMode);
