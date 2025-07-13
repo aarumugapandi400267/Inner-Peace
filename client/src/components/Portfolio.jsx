@@ -40,6 +40,7 @@ export default function Portfolio() {
     const [profile, setProfile] = useState({});
     const [loading, setLoading] = useState(true);
 
+    // const domain = "/Inner-Peace"
     const domain = "https://aarumugapandi400267.github.io/Inner-Peace"
     useEffect(() => {
         const fetchData = async () => {
@@ -129,13 +130,13 @@ export default function Portfolio() {
                             <MuiLink href={`mailto:${contact.email}`} target="_blank" color="inherit">
                                 <Mail color={themeMode === "dark" ? "#fff" : undefined} />
                             </MuiLink>
-                            <MuiLink href="https://github.com/majesty" target="_blank" color="inherit">
+                            <MuiLink href={profile.social.github} target="_blank" color="inherit">
                                 <Github color={themeMode === "dark" ? "#fff" : undefined} />
                             </MuiLink>
-                            <MuiLink href="https://linkedin.com/in/majesty" target="_blank" color="inherit">
+                            <MuiLink href={profile.social.linkedin} target="_blank" color="inherit">
                                 <Linkedin color={themeMode === "dark" ? "#fff" : undefined} />
                             </MuiLink>
-                            <MuiLink href="https://majesty.dev" target="_blank" color="inherit">
+                            <MuiLink href={profile.social.website}target="_blank" color="inherit">
                                 <Globe color={themeMode === "dark" ? "#fff" : undefined} />
                             </MuiLink>
                         </Stack>
