@@ -37,7 +37,7 @@ export default function Portfolio() {
   const [contact, setContact] = useState({ address: "", phone: "", email: "" });
   const [themeMode, setThemeMode] = useState("dark");
 
-  const domain="https://aarumugapandi400267.github.io"
+  const domain="https://aarumugapandi400267.github.io/Inner-Peace"
   useEffect(() => {
     fetch(domain+"/data/projects.json").then(res => res.json()).then(setProjects);
     fetch(domain+"/data/skills.json").then(res => res.json()).then(setSkills);
